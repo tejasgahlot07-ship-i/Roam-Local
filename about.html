@@ -2,26 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Roam Local</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav>
-    <h2>Roam Local</h2>
-    <a href="index.html">Home</a>
-    <a href="explore.html">Explore</a>
-    <a href="community.html">Community</a>
-    <a href="about.html" class="active">About Us</a>
-    <a href="contact.html">Contact Us</a>
-</nav>
 
-<div class="page">
-    <h1>About Roam Local</h1>
-    <p>Roam Local is a web application built to help people uncover the best local spots, cafes, and historical landmarks right in their region.</p>
-    <h2>Our Goal</h2>
-    <p>To provide a clean, fast, and simple user interface utilizing core HTML5 and CSS Grid/Flexbox structures.</p>
-</div>
+    <!-- ================= STICKY GLOBAL HEADER ================= -->
+    <div style="width: 100%; max-width: 1200px; padding: 0 24px; position: sticky; top: 0; z-index: 1000; background: var(--bg-color);">
+        <header>
+            <a href="index.html" class="logo"><span>•</span> Roam Local</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="community.html">Community</a>
+                <a href="about.html" class="active">About Us</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </header>
+    </div>
 
-<footer>© 2026 Roam Local | College Project</footer>
+    <main style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+
+        <!-- ================= ABOUT PAGE ================= -->
+        <section class="page-container" style="border-bottom: none;">
+            <div class="about-hero">
+                <span class="badge" style="margin-bottom: 8px;">ℹ️ ABOUT THE PROJECT</span>
+                <h1>About Roam Local</h1>
+                <p>Roam Local is an editorial digital guide crafted to help residents, curious newcomers, and wanderers uncover the finest regional treasures, subterranean cafes, and celebrated historical landmarks nestled across Delhi and Gurugram.</p>
+            </div>
+
+            <div class="grid-3" style="margin-bottom: 20px;">
+                <div class="pillar-card">
+                    <h4>Our Goal</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">To provide a clean, fast, and simple user interface utilizing core HTML5 and CSS Grid/Flexbox structures, entirely free of bloat.</p>
+                </div>
+                <div class="pillar-card">
+                    <h4>Regional Focus</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">Celebrating the striking blend of old-world Mughal heritage in Delhi alongside the ultra-modern architecture and art scenes of Gurugram.</p>
+                </div>
+                <div class="pillar-card">
+                    <h4>Community-Powered</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">Empowering locals, commuters, and university students to navigate the sprawling NCR landscape efficiently, affordably, and safely.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="page-container" style="width: 100%; border-top: 1px solid var(--border-color); border-bottom: none;">
+            <footer>
+                <div>
+                    <a href="index.html" class="logo" style="margin-bottom: 12px; display: inline-flex;"><span>•</span> Roam Local</a>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 300px;">Curated urban dossiers and hidden cultural enclaves across Delhi and Gurugram. Discover the heartbeat of the capital with authentic insider insight.</p>
+                </div>
+                <div>
+                    <h4>Destinations</h4>
+                    <ul>
+                        <li><a href="explore.html">South Delhi Heritage</a></li>
+                        <li><a href="explore.html">Old Delhi Spice Trails</a></li>
+                        <li><a href="explore.html">Gurugram Modern Hubs</a></li>
+                        <li><a href="explore.html">Aravalli Green Escapes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Explore Local</h4>
+                    <ul>
+                        <li><a href="community.html">Insider Itineraries</a></li>
+                        <li><a href="about.html">Art & Culture Guild</a></li>
+                        <li><a href="about.html">Editorial Mission</a></li>
+                        <li><a href="contact.html">Get in Touch</a></li>
+                    </ul>
+                </div>
+            </footer>
+            <div class="footer-bottom">
+                <span>© 2026 Roam Local | College Project</span>
+                <span>CRAFTED FOR METROPOLITAN EXPLORERS</span>
+            </div>
+        </section>
+
+    </main>
 </body>
 </html>
