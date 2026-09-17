@@ -2,30 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Roam Local</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav>
-    <h2>Roam Local</h2>
-    <a href="index.html">Home</a>
-    <a href="explore.html">Explore</a>
-    <a href="community.html">Community</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html" class="active">Contact Us</a>
-</nav>
 
-<div class="page">
-    <h1>Contact Us</h1>
-    <p>Have a local spot you think we should feature? Send us a message below.</p>
-    <form onsubmit="alert('Thank you for reaching out!'); return false;">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-</div>
+    <!-- ================= STICKY GLOBAL HEADER ================= -->
+    <div style="width: 100%; max-width: 1200px; padding: 0 24px; position: sticky; top: 0; z-index: 1000; background: var(--bg-color);">
+        <header>
+            <a href="index.html" class="logo"><span>•</span> Roam Local</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="community.html">Community</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html" class="active">Contact Us</a>
+            </nav>
+        </header>
+    </div>
 
-<footer>© 2026 Roam Local | College Project</footer>
+    <main style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+
+        <!-- ================= CONTACT PAGE ================= -->
+        <section class="page-container" style="border-bottom: none;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <span class="badge" style="margin-bottom: 8px;">✉️ GET IN TOUCH</span>
+                <h1 style="font-size: 2rem;">Contact Us</h1>
+                <p style="color: var(--text-muted);">Have a local spot you think we should feature? Send us a message below.</p>
+            </div>
+
+            <div class="contact-container" style="margin-bottom: 40px;">
+                <form>
+                    <div class="form-group">
+                        <label>Your Name *</label>
+                        <input type="text" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label>Your Email *</label>
+                        <input type="email" placeholder="Enter your email address">
+                    </div>
+                    <div class="form-group">
+                        <label>Your Message *</label>
+                        <textarea placeholder="Write your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%; justify-content: center;">Send Message ➔</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="page-container" style="width: 100%; border-top: 1px solid var(--border-color); border-bottom: none;">
+            <footer>
+                <div>
+                    <a href="index.html" class="logo" style="margin-bottom: 12px; display: inline-flex;"><span>•</span> Roam Local</a>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 300px;">Curated urban dossiers and hidden cultural enclaves across Delhi and Gurugram. Discover the heartbeat of the capital with authentic insider insight.</p>
+                </div>
+                <div>
+                    <h4>Destinations</h4>
+                    <ul>
+                        <li><a href="explore.html">South Delhi Heritage</a></li>
+                        <li><a href="explore.html">Old Delhi Spice Trails</a></li>
+                        <li><a href="explore.html">Gurugram Modern Hubs</a></li>
+                        <li><a href="explore.html">Aravalli Green Escapes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Explore Local</h4>
+                    <ul>
+                        <li><a href="community.html">Insider Itineraries</a></li>
+                        <li><a href="about.html">Art & Culture Guild</a></li>
+                        <li><a href="about.html">Editorial Mission</a></li>
+                        <li><a href="contact.html">Get in Touch</a></li>
+                    </ul>
+                </div>
+            </footer>
+            <div class="footer-bottom">
+                <span>© 2026 Roam Local | College Project</span>
+                <span>CRAFTED FOR METROPOLITAN EXPLORERS</span>
+            </div>
+        </section>
+
+    </main>
 </body>
 </html>
