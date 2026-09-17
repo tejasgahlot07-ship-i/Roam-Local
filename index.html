@@ -2,30 +2,114 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Roam Local - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roam Local - Delhi & Gurugram Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav>
-    <h2>📍 Roam Local</h2>
-    <a href="index.html" class="active">Home</a>
-    <a href="explore.html">Explore</a>
-    <a href="community.html">Community</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
-</nav>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>Discover What's Near You</h1>
-        <p>Your ultimate local guide to top-rated sights, hidden food spots, and weekend getaways around Gurugram and Delhi.</p>
-        <a href="explore.html" class="btn-link">Explore Destinations</a>
+    <!-- ================= STICKY GLOBAL HEADER ================= -->
+    <div style="width: 100%; max-width: 1200px; padding: 0 24px; position: sticky; top: 0; z-index: 1000; background: var(--bg-color);">
+        <header>
+            <a href="index.html" class="logo"><span>•</span> Roam Local</a>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="community.html">Community</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </header>
     </div>
-    <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=600&q=80" alt="Cityscape">
-    </div>
-</section>
 
-<footer>© 2026 Roam Local | College Project</footer>
+    <main style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+
+        <!-- ================= PAGE 1: HOME PAGE ================= -->
+        <section class="page-container" id="home-page" style="border-bottom: none;">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <span class="badge" style="margin-bottom: 12px;">📍 NCR REGIONAL GUIDE & DISCOVERY</span>
+                    <h1>Your ultimate local guide to top-rated sights, hidden food spots, and weekend getaways around Gurugram and Delhi.</h1>
+                    <div style="display: flex; gap: 12px;">
+                        <a href="explore.html" class="btn">Explore Destinations →</a>
+                        <a href="community.html" class="btn btn-outline" style="border:none;">Community Tips →</a>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6-M9_jvYLBNCxfeuX6c5ow3HxHlTmexL87DZP-TZjhoREGLGl3cvRd0VA&s=10" alt="Gurugram Skyline">
+                    <div style="padding: 16px;">
+                        <strong>Gurugram Cyber Hub & NCR Nightlife</strong>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">DLF Phase 2, Gurugram</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-bottom: 20px;">Popular Spots in Delhi & Gurugram</h3>
+            <div class="grid-4">
+                <div class="card">
+                    <img src="https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/1/2016/08/290816_ThingsToDoNearAirport_CyberHub.jpg" alt="Cyber Hub">
+                    <div class="card-content">
+                        <h4>Cyber Hub, Gurugram</h4>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">The premier social nexus of Millennium City...</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://i.pinimg.com/474x/5d/49/4d/5d494d3ab6ac479b630cbfa74f3882ab.jpg" alt="Qutub Minar">
+                    <div class="card-content">
+                        <h4>Qutub Minar, Delhi</h4>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Historic 12th-century monument and complex...</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/07/3a/a4/e8.jpg" alt="Hauz Khas">
+                    <div class="card-content">
+                        <h4>Hauz Khas Village</h4>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Trendy lakeside cafes and medieval history...</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://im.whatshot.in/img/2019/Sep/17494232-1661291670832853-6488691335002849280-n-1568100078.jpg?w=375&h=375&q=60&wp=1" alt="Leisure Valley">
+                    <div class="card-content">
+                        <h4>Leisure Valley Park</h4>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">A serene 25-acre urban sanctuary in GGM...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="page-container" style="width: 100%; border-top: 1px solid var(--border-color); border-bottom: none;">
+            <footer>
+                <div>
+                    <a href="index.html" class="logo" style="margin-bottom: 12px; display: inline-flex;"><span>•</span> Roam Local</a>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 300px;">Curated urban dossiers and hidden cultural enclaves across Delhi and Gurugram. Discover the heartbeat of the capital with authentic insider insight.</p>
+                </div>
+                <div>
+                    <h4>Destinations</h4>
+                    <ul>
+                        <li><a href="explore.html">South Delhi Heritage</a></li>
+                        <li><a href="explore.html">Old Delhi Spice Trails</a></li>
+                        <li><a href="explore.html">Gurugram Modern Hubs</a></li>
+                        <li><a href="explore.html">Aravalli Green Escapes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Explore Local</h4>
+                    <ul>
+                        <li><a href="community.html">Insider Itineraries</a></li>
+                        <li><a href="about.html">Art & Culture Guild</a></li>
+                        <li><a href="about.html">Editorial Mission</a></li>
+                        <li><a href="contact.html">Get in Touch</a></li>
+                    </ul>
+                </div>
+            </footer>
+            <div class="footer-bottom">
+                <span>© 2026 Roam Local | College Project</span>
+                <span>CRAFTED FOR METROPOLITAN EXPLORERS</span>
+            </div>
+        </section>
+
+    </main>
 </body>
 </html>
