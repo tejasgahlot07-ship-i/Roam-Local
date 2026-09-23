@@ -7,6 +7,22 @@
     --accent-hover: #C0431D;
     --border-color: #E7E0DB;
     --tag-bg: #F4EBE4;
+    --nav-bg: #F3ECE6;
+
+    /* Consolidated design tokens (same values as before, now reused consistently) */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-tab: 20px;
+    --radius-pill: 30px;
+
+    --shadow-header: 0 4px 12px rgba(251, 247, 244, 0.9);
+    --shadow-xs: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.02);
+    --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+    --transition-fast: 0.2s ease;
 }
 
 * {
@@ -21,14 +37,25 @@ html {
     scroll-padding-top: 100px; /* Offset for header height + padding */
 }
 
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-main);
     line-height: 1.5;
     display: flex;
     flex-direction: column;
     align-items: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+    overflow-wrap: break-word;
 }
 
 .page-container {
@@ -52,7 +79,7 @@ header {
     padding: 16px 0;
     margin-bottom: 30px;
     width: 100%;
-    box-shadow: 0 4px 12px rgba(251, 247, 244, 0.9);
+    box-shadow: var(--shadow-header);
 }
 
 /* --- LOGO UPDATED SIZE --- */
@@ -77,9 +104,9 @@ nav {
     display: flex;
     gap: 24px;
     align-items: center;
-    background: #F3ECE6;
+    background-color: var(--nav-bg);
     padding: 6px 16px;
-    border-radius: 30px;
+    border-radius: var(--radius-pill);
 }
 
 nav a {
@@ -87,7 +114,7 @@ nav a {
     color: var(--text-muted);
     font-size: 0.9rem;
     font-weight: 500;
-    transition: color 0.2s, background-color 0.2s;
+    transition: color var(--transition-fast), background-color var(--transition-fast);
     transform: none !important; /* Removed pop/lift movement */
 }
 
@@ -95,8 +122,13 @@ nav a.active, nav a:hover {
     color: var(--text-main);
     background: var(--card-bg);
     padding: 4px 12px;
-    border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-radius: var(--radius-tab);
+    box-shadow: var(--shadow-xs);
+}
+
+nav a:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
 }
 
 /* --- Buttons & Badges --- */
@@ -104,7 +136,7 @@ nav a.active, nav a:hover {
     background-color: var(--accent-color);
     color: white;
     padding: 10px 20px;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
@@ -113,11 +145,16 @@ nav a.active, nav a:hover {
     gap: 8px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color var(--transition-fast);
 }
 
 .btn:hover {
     background-color: var(--accent-hover);
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
 }
 
 .btn-outline {
@@ -127,14 +164,14 @@ nav a.active, nav a:hover {
 }
 
 .btn-outline:hover {
-    background: var(--tag-bg);
+    background-color: var(--tag-bg);
 }
 
 .badge {
     background: var(--tag-bg);
     color: var(--accent-color);
     padding: 4px 10px;
-    border-radius: 20px;
+    border-radius: var(--radius-tab);
     font-size: 0.75rem;
     font-weight: 600;
     display: inline-flex;
@@ -163,16 +200,17 @@ nav a.active, nav a:hover {
 
 .card {
     background: var(--card-bg);
-    border-radius: 12px;
+    border-radius: var(--radius-md);
     border: 1px solid var(--border-color);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: box-shadow 0.2s;
+    min-width: 0;
+    transition: box-shadow var(--transition-fast);
 }
 
 .card:hover {
-    box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+    box-shadow: var(--shadow-md);
 }
 
 .card img {
@@ -208,10 +246,10 @@ nav a.active, nav a:hover {
 
 .hero-card {
     background: var(--card-bg);
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     border: 1px solid var(--border-color);
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: var(--shadow-lg);
 }
 
 .hero-card img {
@@ -224,17 +262,18 @@ nav a.active, nav a:hover {
 .community-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 12px;
+    border-radius: var(--radius-md);
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    min-width: 0;
 }
 
 .metrics-banner {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 12px;
+    border-radius: var(--radius-md);
     padding: 24px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -262,7 +301,8 @@ nav a.active, nav a:hover {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     padding: 24px;
-    border-radius: 12px;
+    border-radius: var(--radius-md);
+    min-width: 0;
 }
 
 /* --- CONTACT US --- */
@@ -271,9 +311,9 @@ nav a.active, nav a:hover {
     margin: 0 auto 40px auto;
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     padding: 32px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    box-shadow: var(--shadow-sm);
 }
 
 .form-group {
@@ -292,11 +332,18 @@ nav a.active, nav a:hover {
     width: 100%;
     padding: 12px;
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     background: var(--bg-color);
     font-family: inherit;
     font-size: 0.9rem;
     color: var(--text-main);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(217, 83, 43, 0.15);
 }
 
 .form-group textarea {
@@ -335,6 +382,7 @@ footer ul li a {
     text-decoration: none;
     color: var(--text-muted);
     font-size: 0.9rem;
+    transition: color var(--transition-fast);
 }
 
 footer ul li a:hover {
