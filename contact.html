@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Roam Local</title>
+    <title>About Us - Roam Local</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -17,38 +17,52 @@
                 <a href="index.html">Home</a>
                 <a href="explore.html">Explore</a>
                 <a href="community.html">Community</a>
-                <a href="about.html">About Us</a>
-                <a href="contact.html" class="active">Contact Us</a>
+                <a href="saved.html">Saved</a>
+                <a href="about.html" class="active">About Us</a>
+                <a href="contact.html">Contact Us</a>
             </nav>
         </header>
     </div>
 
     <main style="width: 100%; display: flex; flex-direction: column; align-items: center;">
 
-        <!-- ================= CONTACT PAGE ================= -->
+        <!-- ================= ABOUT PAGE ================= -->
         <section class="page-container" style="border-bottom: none;">
-            <div style="text-align: center; margin-bottom: 30px;">
-                <span class="badge" style="margin-bottom: 8px;">✉️ GET IN TOUCH</span>
-                <h1 style="font-size: 2rem;">Contact Us</h1>
-                <p style="color: var(--text-muted);">Have a local spot you think we should feature? Send us a message below.</p>
+            <div class="about-hero">
+                <span class="badge" style="margin-bottom: 8px;">ℹ️ ABOUT THE PROJECT</span>
+                <h1>About Roam Local</h1>
+                <p>Roam Local is an editorial digital guide crafted to help residents, curious newcomers, and wanderers uncover the finest regional treasures, subterranean cafes, and celebrated historical landmarks nestled across Delhi and Gurugram.</p>
             </div>
 
-            <div class="contact-container" style="margin-bottom: 40px;">
-                <form>
-                    <div class="form-group">
-                        <label>Your Name *</label>
-                        <input type="text" placeholder="Enter your name">
-                    </div>
-                    <div class="form-group">
-                        <label>Your Email *</label>
-                        <input type="email" placeholder="Enter your email address">
-                    </div>
-                    <div class="form-group">
-                        <label>Your Message *</label>
-                        <textarea placeholder="Write your message here..."></textarea>
-                    </div>
-                    <button type="submit" class="btn" style="width: 100%; justify-content: center;">Send Message ➔</button>
-                </form>
+            <div class="grid-3" style="margin-bottom: 20px;">
+                <div class="pillar-card">
+                    <h4>Our Goal</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">To provide a clean, fast, and simple user interface utilizing core HTML5 and CSS Grid/Flexbox structures, entirely free of bloat.</p>
+                </div>
+                <div class="pillar-card">
+                    <h4>Regional Focus</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">Celebrating the striking blend of old-world Mughal heritage in Delhi alongside the ultra-modern architecture and art scenes of Gurugram.</p>
+                </div>
+                <div class="pillar-card">
+                    <h4>Community-Powered</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">Empowering locals, commuters, and university students to navigate the sprawling NCR landscape efficiently, affordably, and safely.</p>
+                </div>
+            </div>
+
+            <h3 style="margin: 40px 0 20px;">What's Inside</h3>
+            <div class="grid-3">
+                <div class="pillar-card">
+                    <h4>Explore &amp; Discover</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">Live search, region filters and sorting, plus a detail page for every destination. <a href="explore.html" style="color: var(--accent-color);">Open Explore →</a></p>
+                </div>
+                <div class="pillar-card">
+                    <h4>Save &amp; Share</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">Favorite places and post community tips. Everything is stored in your browser. <a href="saved.html" style="color: var(--accent-color);">View Saved →</a></p>
+                </div>
+                <div class="pillar-card">
+                    <h4>Built With</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">Semantic HTML5, CSS Grid and Flexbox, and vanilla JavaScript using the DOM, events, localStorage and JSON export.</p>
+                </div>
             </div>
         </section>
 
@@ -62,18 +76,18 @@
                 <div>
                     <h4>Destinations</h4>
                     <ul>
-                        <li><a href="explore.html">South Delhi Heritage</a></li>
-                        <li><a href="explore.html">Old Delhi Spice Trails</a></li>
-                        <li><a href="explore.html">Gurugram Modern Hubs</a></li>
-                        <li><a href="explore.html">Aravalli Green Escapes</a></li>
+                        <li><a href="explore.html?region=south-delhi">South Delhi Heritage</a></li>
+                        <li><a href="explore.html?region=central-delhi">Central Delhi Gardens</a></li>
+                        <li><a href="explore.html?region=gurugram">Gurugram Modern Hubs</a></li>
+                        <li><a href="explore.html">All Destinations</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4>Explore Local</h4>
                     <ul>
-                        <li><a href="community.html">Insider Itineraries</a></li>
-                        <li><a href="about.html">Art & Culture Guild</a></li>
-                        <li><a href="about.html">Editorial Mission</a></li>
+                        <li><a href="community.html">Community Tips</a></li>
+                        <li><a href="saved.html">Saved Places</a></li>
+                        <li><a href="about.html">About the Project</a></li>
                         <li><a href="contact.html">Get in Touch</a></li>
                     </ul>
                 </div>
@@ -85,5 +99,7 @@
         </section>
 
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
