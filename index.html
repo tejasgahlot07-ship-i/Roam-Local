@@ -17,6 +17,7 @@
                 <a href="index.html" class="active">Home</a>
                 <a href="explore.html">Explore</a>
                 <a href="community.html">Community</a>
+                <a href="saved.html">Saved</a>
                 <a href="about.html">About Us</a>
                 <a href="contact.html">Contact Us</a>
             </nav>
@@ -31,7 +32,7 @@
                 <div class="hero-content">
                     <span class="badge" style="margin-bottom: 12px;">📍 NCR REGIONAL GUIDE & DISCOVERY</span>
                     <h1>Your ultimate local guide to top-rated sights, hidden food spots, and weekend getaways around Gurugram and Delhi.</h1>
-                    <div style="display: flex; gap: 12px;">
+                    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
                         <a href="explore.html" class="btn">Explore Destinations →</a>
                         <a href="community.html" class="btn btn-outline" style="border:none;">Community Tips →</a>
                     </div>
@@ -47,35 +48,60 @@
 
             <h3 style="margin-bottom: 20px;">Popular Spots in Delhi & Gurugram</h3>
             <div class="grid-4">
-                <div class="card">
-                    <img src="https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/1/2016/08/290816_ThingsToDoNearAirport_CyberHub.jpg" alt="Cyber Hub">
+                <div class="card" data-id="cyber-hub">
+                    <button type="button" class="fav-btn" data-id="cyber-hub" aria-label="Save Cyber Hub, Gurugram to favorites" aria-pressed="false">♡</button>
+                    <img src="https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/1/2016/08/290816_ThingsToDoNearAirport_CyberHub.jpg" alt="Cyber Hub, Gurugram">
                     <div class="card-content">
-                        <h4>Cyber Hub, Gurugram</h4>
-                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">The premier social nexus of Millennium City...</p>
+                        <div>
+                            <h4>Cyber Hub, Gurugram</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">The premier social nexus of Millennium City...</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="destination.html?id=cyber-hub" class="map-btn">View details →</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="https://i.pinimg.com/474x/5d/49/4d/5d494d3ab6ac479b630cbfa74f3882ab.jpg" alt="Qutub Minar">
+                <div class="card" data-id="qutub-minar">
+                    <button type="button" class="fav-btn" data-id="qutub-minar" aria-label="Save Qutub Minar, Delhi to favorites" aria-pressed="false">♡</button>
+                    <img src="https://i.pinimg.com/474x/5d/49/4d/5d494d3ab6ac479b630cbfa74f3882ab.jpg" alt="Qutub Minar, Delhi">
                     <div class="card-content">
-                        <h4>Qutub Minar, Delhi</h4>
-                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Historic 12th-century monument and complex...</p>
+                        <div>
+                            <h4>Qutub Minar, Delhi</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Historic 12th-century monument and complex...</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="destination.html?id=qutub-minar" class="map-btn">View details →</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/07/3a/a4/e8.jpg" alt="Hauz Khas">
+                <div class="card" data-id="hauz-khas">
+                    <button type="button" class="fav-btn" data-id="hauz-khas" aria-label="Save Hauz Khas Village to favorites" aria-pressed="false">♡</button>
+                    <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/07/3a/a4/e8.jpg" alt="Hauz Khas Village">
                     <div class="card-content">
-                        <h4>Hauz Khas Village</h4>
-                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Trendy lakeside cafes and medieval history...</p>
+                        <div>
+                            <h4>Hauz Khas Village</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Trendy lakeside cafes and medieval history...</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="destination.html?id=hauz-khas" class="map-btn">View details →</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="https://im.whatshot.in/img/2019/Sep/17494232-1661291670832853-6488691335002849280-n-1568100078.jpg?w=375&h=375&q=60&wp=1" alt="Leisure Valley">
+                <div class="card" data-id="leisure-valley">
+                    <button type="button" class="fav-btn" data-id="leisure-valley" aria-label="Save Leisure Valley Park to favorites" aria-pressed="false">♡</button>
+                    <img src="https://im.whatshot.in/img/2019/Sep/17494232-1661291670832853-6488691335002849280-n-1568100078.jpg?w=375&h=375&q=60&wp=1" alt="Leisure Valley Park">
                     <div class="card-content">
-                        <h4>Leisure Valley Park</h4>
-                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">A serene 25-acre urban sanctuary in GGM...</p>
+                        <div>
+                            <h4>Leisure Valley Park</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">A serene 25-acre urban sanctuary in GGM...</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="destination.html?id=leisure-valley" class="map-btn">View details →</a>
+                        </div>
                     </div>
                 </div>
             </div>
+            <p style="margin-top: 24px; text-align: center;"><a href="explore.html" class="btn btn-outline">See all destinations →</a></p>
         </section>
 
         <!-- Footer -->
@@ -88,18 +114,18 @@
                 <div>
                     <h4>Destinations</h4>
                     <ul>
-                        <li><a href="explore.html">South Delhi Heritage</a></li>
-                        <li><a href="explore.html">Old Delhi Spice Trails</a></li>
-                        <li><a href="explore.html">Gurugram Modern Hubs</a></li>
-                        <li><a href="explore.html">Aravalli Green Escapes</a></li>
+                        <li><a href="explore.html?region=south-delhi">South Delhi Heritage</a></li>
+                        <li><a href="explore.html?region=central-delhi">Central Delhi Gardens</a></li>
+                        <li><a href="explore.html?region=gurugram">Gurugram Modern Hubs</a></li>
+                        <li><a href="explore.html">All Destinations</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4>Explore Local</h4>
                     <ul>
-                        <li><a href="community.html">Insider Itineraries</a></li>
-                        <li><a href="about.html">Art & Culture Guild</a></li>
-                        <li><a href="about.html">Editorial Mission</a></li>
+                        <li><a href="community.html">Community Tips</a></li>
+                        <li><a href="saved.html">Saved Places</a></li>
+                        <li><a href="about.html">About the Project</a></li>
                         <li><a href="contact.html">Get in Touch</a></li>
                     </ul>
                 </div>
@@ -111,5 +137,7 @@
         </section>
 
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
