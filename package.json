@@ -1,0 +1,27 @@
+{
+  "name": "roam-local",
+  "version": "1.0.0",
+  "description": "Delhi and Gurugram regional travel guide with Node.js, Express, local JSON storage, and MongoDB CRUD",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "roam-local",
+    "express",
+    "mongodb",
+    "travel-guide"
+  ],
+  "author": "Tejas, Rahul, Adarsh, Paarth, Pratyaksh",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "mongoose": "^9.12.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
