@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saved Places - Roam Local</title>
+    <title>About Us - Roam Local</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -17,8 +17,8 @@
                 <a href="index.html">Home</a>
                 <a href="explore.html">Explore</a>
                 <a href="community.html">Community</a>
-                <a href="saved.html" class="active">Saved</a>
-                <a href="about.html">About Us</a>
+                <a href="saved.html">Saved</a>
+                <a href="about.html" class="active">About Us</a>
                 <a href="contact.html">Contact Us</a>
             </nav>
         </header>
@@ -26,25 +26,43 @@
 
     <main style="width: 100%; display: flex; flex-direction: column; align-items: center;">
 
-        <!-- ================= SAVED PLACES PAGE (NEW) ================= -->
+        <!-- ================= ABOUT PAGE ================= -->
         <section class="page-container" style="border-bottom: none;">
-            <div style="margin-bottom: 24px;">
-                <span class="badge" style="margin-bottom: 8px;">♥ YOUR FAVORITES</span>
-                <h1 style="font-size: 2rem;">Saved Places</h1>
-                <p style="color: var(--text-muted);" id="savedSummary">Loading your saved places...</p>
+            <div class="about-hero">
+                <span class="badge" style="margin-bottom: 8px;">ℹ️ ABOUT THE PROJECT</span>
+                <h1>About Roam Local</h1>
+                <p>Roam Local is an editorial digital guide crafted to help residents, curious newcomers, and wanderers uncover the finest regional treasures, subterranean cafes, and celebrated historical landmarks nestled across Delhi and Gurugram.</p>
             </div>
 
-            <div class="export-row">
-                <button type="button" class="btn btn-outline" id="exportSavedBtn" style="font-size: 0.85rem; padding: 8px 16px;" hidden>Download Saved List (.json) 📥</button>
-                <button type="button" class="btn btn-outline" id="clearSavedBtn" style="font-size: 0.85rem; padding: 8px 16px;" hidden>Clear All</button>
+            <div class="grid-3" style="margin-bottom: 20px;">
+                <div class="pillar-card">
+                    <h4>Our Goal</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">To provide a clean, fast, and full-stack regional travel platform utilizing semantic HTML5, modern CSS, vanilla JS, and a Node.js backend.</p>
+                </div>
+                <div class="pillar-card">
+                    <h4>Regional Focus</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">Celebrating the striking blend of old-world Mughal heritage in Delhi alongside the ultra-modern architecture and art scenes of Gurugram.</p>
+                </div>
+                <div class="pillar-card">
+                    <h4>Community-Powered</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">Empowering locals, commuters, and university students to navigate the sprawling NCR landscape efficiently, affordably, and safely.</p>
+                </div>
             </div>
 
-            <div class="grid-3" id="savedGrid"></div>
-
-            <div class="empty-state" id="savedEmpty" hidden>
-                <h3>No saved places yet</h3>
-                <p>Tap the heart on any destination to keep it here for later.</p>
-                <a href="explore.html" class="btn">Browse destinations →</a>
+            <h3 style="margin: 40px 0 20px;">What's Inside</h3>
+            <div class="grid-3">
+                <div class="pillar-card">
+                    <h4>Explore &amp; Live Weather</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">Live search, region filters, sorting, and destination pages enriched with real-time Open-Meteo weather data. <a href="explore.html" style="color: var(--accent-color);">Open Explore →</a></p>
+                </div>
+                <div class="pillar-card">
+                    <h4>Server-Backed Save &amp; Share</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">Favorite places and contact messages persist to local JSON files on the server, while community tips run full CRUD on MongoDB. <a href="saved.html" style="color: var(--accent-color);">View Saved →</a></p>
+                </div>
+                <div class="pillar-card">
+                    <h4>Built With</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">HTML5, CSS3, Vanilla JS, Node.js, Express REST APIs, local JSON file persistence, MongoDB (Mongoose), and Open-Meteo API.</p>
+                </div>
             </div>
         </section>
 

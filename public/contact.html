@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destination - Roam Local</title>
+    <title>Contact Us - Roam Local</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,26 +15,55 @@
             <a href="index.html" class="logo"><span>•</span> Roam Local</a>
             <nav>
                 <a href="index.html">Home</a>
-                <a href="explore.html" class="active">Explore</a>
+                <a href="explore.html">Explore</a>
                 <a href="community.html">Community</a>
                 <a href="saved.html">Saved</a>
                 <a href="about.html">About Us</a>
-                <a href="contact.html">Contact Us</a>
+                <a href="contact.html" class="active">Contact Us</a>
             </nav>
         </header>
     </div>
 
     <main style="width: 100%; display: flex; flex-direction: column; align-items: center;">
 
-        <!-- ================= DESTINATION DETAIL PAGE (NEW) ================= -->
+        <!-- ================= CONTACT PAGE ================= -->
         <section class="page-container" style="border-bottom: none;">
-            <div id="destinationDetail">
-                <p style="color: var(--text-muted);">Loading destination...</p>
+            <div style="text-align: center; margin-bottom: 30px;">
+                <span class="badge" style="margin-bottom: 8px;">✉️ GET IN TOUCH</span>
+                <h1 style="font-size: 2rem;">Contact Us</h1>
+                <p style="color: var(--text-muted);">Have a local spot you think we should feature? Send us a message below.</p>
             </div>
 
-            <div id="relatedSection" style="margin-top: 20px;" hidden>
-                <h3 id="relatedTitle" style="margin-bottom: 20px;">More destinations</h3>
-                <div class="grid-3" id="relatedGrid"></div>
+            <div class="contact-container" style="margin-bottom: 40px;">
+                <div id="formStatus" class="form-status"></div>
+
+                <form id="contactForm" novalidate>
+                    <div class="form-group" id="nameGroup">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" placeholder="Enter your name" maxlength="60">
+                        <span class="error-message" id="nameError">Please enter your name (at least 2 characters).</span>
+                    </div>
+
+                    <div class="form-group" id="emailGroup">
+                        <label for="email">Your Email *</label>
+                        <input type="email" id="email" placeholder="Enter your email address">
+                        <span class="error-message" id="emailError">Please enter a valid email address.</span>
+                    </div>
+
+                    <div class="form-group" id="messageGroup">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" placeholder="Write your message here..." maxlength="500"></textarea>
+                        <small class="char-counter" id="messageCounter">0 / 500</small>
+                        <span class="error-message" id="messageError">Message must be at least 10 characters long.</span>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%; justify-content: center;">Send Message ➔</button>
+                </form>
+
+                <div style="margin-top: 24px; padding-top: 20px; border-top: 1px dashed var(--border-color); text-align: center;">
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px;">Submissions are saved directly on the server in <code>data/messages.json</code>.</p>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);" id="savedCount">Checking saved messages...</p>
+                </div>
             </div>
         </section>
 
