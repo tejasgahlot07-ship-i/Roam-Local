@@ -15,12 +15,6 @@ A regional travel guide for Delhi and Gurugram built to help residents, students
 - **Database & Storage:** MongoDB (Mongoose), Local JSON File Storage (`fs/promises`)
 - **External API:** Open-Meteo Weather API
 
-## Setup & Run Locally
-1. Install dependencies: `npm install`
-2. Create a `.env` file using `.env.example` and add your `PORT` and `MONGODB_URI`.
-3. Start the server: `npm start`
-4. Open `http://localhost:4000` in your browser.
-
 ## Team
 - Tejas Gahlot
 - Rahul Rajpurohit
